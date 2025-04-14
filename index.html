@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saket Koundinya - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Cursor Animation -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Loading Animation -->
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">Saket Koundinya</a>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="assets/CV.pdf" target="_blank">CV</a></li> <!-- Updated Link -->
+            </ul>
+        </div>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hello, I'm Saket Koundinya</h1>
+            <h2>A Student at IIIT Hyderabad</h2>
+            <p>I am currently pursuing a dual degree in Computer Science and Computational Natural Sciences (CND). I am passionate about physics and enjoy exploring computational tools to solve scientific problems.</p>
+            <p>In my first year, I achieved 3rd place in Megathon, competing against over 500 participants.</p>
+            <div class="cta-buttons">
+                <a href="assets/CV.pdf" class="btn primary-btn" download>Download CV</a> <!-- Updated Link -->
+                <a href="#text-analysis" class="btn secondary-btn">Analyze Text (Q3)</a> <!-- Updated Link to Q3 Section -->
+            </div>
+        </div>
+        <div class="hero-image">
+            <!-- Profile picture -->
+            <img src="assets/profile.jpg" alt="Saket Koundinya"> <!-- Ensure you have profile.jpg in assets -->
+        </div>
+    </section>
+
+    <!-- Birthplace Gallery Section -->
+    <section class="birthplace">
+        <div class="section-header">
+            <h2>My Birthplace - Hyderabad</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="gallery">
+            <!-- Images from Hyderabad (Using Local Paths) -->
+            <div class="gallery-item">
+                <img src="assets/charminar.jpg" alt="Charminar, Hyderabad">
+                <p>The iconic Charminar</p>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/golconda.jpg" alt="View of Golconda Fort, Hyderabad">
+                <p>View of Golconda Fort</p>
+            </div>
+            <div class="gallery-item">
+                 <img src="assets/hussain-sagar.jpg" alt="Hussain Sagar Lake view, Hyderabad">
+                <p>Hussain Sagar Lake view</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Text Analysis Section (Replaces Contact Section) -->
+    <section id="text-analysis" class="text-analysis-section">
+        <h2>Text Analyzer (Q3)</h2>
+        <p>Paste your text (more than 10000 words suggested for testing) into the box below and click "Analyze Text".</p>
+
+        <div class="analyzer-container">
+            <textarea id="textInput" placeholder="Paste your text here..." rows="15"></textarea>
+            <button id="analyzeButton" class="btn primary-btn">Analyze Text</button>
+            <div id="analysisResults">
+                <!-- Results will be displayed here by JavaScript -->
+                <p>Results will appear here after analysis.</p>
+            </div>
+        </div>
+    </section>
+    <!-- End of Text Analysis Section -->
+
+
+    <!-- FOOTER WITH CONTENT RESTORED -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>Saket Koundinya</h3>
+                <p>Portfolio & Personal Website</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="assets/CV.pdf" target="_blank">CV</a></li> <!-- Updated Link -->
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Stay Updated</h4>
+                <p>Subscribe to my newsletter for latest updates</p>
+                <form id="newsletterForm">
+                    <input type="email" placeholder="Your Email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Saket Koundinya. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- END OF FOOTER -->
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
