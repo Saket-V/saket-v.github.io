@@ -1,6 +1,4 @@
-
 document.addEventListener('DOMContentLoaded', function() {
-
 
     function logEvent(eventType, eventObjectDescription) {
         const timestamp = new Date().toISOString();
@@ -35,8 +33,6 @@ document.addEventListener('DOMContentLoaded', function() {
         logEvent('click', description);
     }, true);
 
-    // --- END OF EVENT CAPTURING Q2 CODE ---
-
     setTimeout(function() {
         const loaderWrapper = document.querySelector('.loader-wrapper');
         if (loaderWrapper) {
@@ -53,12 +49,10 @@ document.addEventListener('DOMContentLoaded', function() {
     if (cursor && cursorFollower) {
         let mouseX = 0, mouseY = 0;
         let cursorX = 0, cursorY = 0;
-
         document.addEventListener('mousemove', function(e) {
             mouseX = e.clientX;
             mouseY = e.clientY;
         });
-
         function animateCursor() {
             let dx = mouseX - cursorX;
             let dy = mouseY - cursorY;
@@ -71,21 +65,18 @@ document.addEventListener('DOMContentLoaded', function() {
             requestAnimationFrame(animateCursor);
         }
         animateCursor();
-
         document.addEventListener('mousedown', function() {
             cursor.style.width = '8px';
             cursor.style.height = '8px';
             cursorFollower.style.width = '40px';
             cursorFollower.style.height = '40px';
         });
-
         document.addEventListener('mouseup', function() {
             cursor.style.width = '10px';
             cursor.style.height = '10px';
             cursorFollower.style.width = '30px';
             cursorFollower.style.height = '30px';
         });
-
         const linksAndButtons = document.querySelectorAll('a, button, .menu-toggle');
         linksAndButtons.forEach(link => {
             link.addEventListener('mouseenter', function() {
@@ -173,7 +164,12 @@ document.addEventListener('DOMContentLoaded', function() {
         analyzeButton.addEventListener('click', function() {
             const text = textInput.value;
             if (!text.trim()) {
-                analysisResultsDiv.innerHTML = '<p>Please enter some text to analyze.</p>';
+                analysisResultsDiv.innerHTML = '<p style="color: red;">Please enter some text to analyze.</p>';
+                return;
+            }
+            const requiredLength = 10000;
+            if (text.length <= requiredLength) {
+                analysisResultsDiv.innerHTML = `<p style="color: red;">Text must contain more than ${requiredLength} characters for analysis. Current length: ${text.length}.</p>`;
                 return;
             }
             analyzeText(text);
@@ -214,8 +210,6 @@ document.addEventListener('DOMContentLoaded', function() {
         html += `</p>`;
         return html;
     }
-
-    // Newsletter form submission code removed
 
     const revealElements = document.querySelectorAll('.section-header, .hero-content, .hero-image, .gallery-item, .analyzer-container, .timeline-item, .skill-card, .footer-content > div');
 
